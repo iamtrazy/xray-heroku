@@ -2,11 +2,11 @@
   "inbounds":[
         {
             "port": 443,
-            "protocol": "$PROTOCOL",
+            "protocol": "vless",
             "settings": {
                 "clients": [
                     {
-                        "id": "$UUID", 
+                        "id": "6bb7c6b1-5279-4cdc-af63-90daeaa2016b", 
                         "level": 0,
                         "email": "love@example.com"
                     }

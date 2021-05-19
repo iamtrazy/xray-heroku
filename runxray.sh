@@ -1,11 +1,4 @@
 #!/bin/sh
-# certificate
-openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
-    -subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=www.example.com" \
-    -keyout xray.key  -out xray.crt
-cp xray.key /etc/xray/
-cp xray.crt /etc/xray/
-chmod 777 /etc/xray/xray.key
 # config xray
 cat << EOF > /etc/xray/config.json
 {

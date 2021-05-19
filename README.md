@@ -4,7 +4,9 @@ Click the icon above to deploy.
 
 Optional protocols: vmess or vless.
 
-Default ID: c95ef1d4-f3ac-4586-96e9-234a37dda068
+Default UUID: 36cfc3de-ecfd-4752-ae6f-8f0f92035143
+
+Default Timezone = Asia/Colombo
 
 Address: appname.herokuapp.com
 

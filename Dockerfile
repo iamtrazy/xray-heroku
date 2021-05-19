@@ -13,4 +13,6 @@ RUN set -ex \
 
 VOLUME /etc/xray
 ENV TZ=Asia/Colombo
-CMD /usr/bin/xray -config /etc/xray/config.json > /dev/null
+ADD runxray.sh /runxray.sh
+RUN chmod +x /runxray.sh
+CMD /runxray.sh

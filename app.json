@@ -1,0 +1,18 @@
+{
+    "name": "xray-heroku",
+    "description": "deploy xray to heroku",
+    "keywords": ["xray"],
+    "env": {
+        "UUID": {
+            "description": "xray UUID",
+            "value": "c95ef1d4-f3ac-4586-96e9-234a37dda068"        
+        },
+        "PROTOCOL": {
+            "description": "xray protocol, vmess or vless",
+            "value": "vless"
+        }
+    },
+    "website": "https://starts.sh",
+    "repository": "https://github.com/iamtrazy/xray-heroku",
+    "stack": "container"
+}

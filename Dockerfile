@@ -19,7 +19,7 @@ RUN chmod +x /runxray.sh
 RUN openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
     	-subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=www.example.com" \
     	-keyout xray.key  -out xray.crt
-RUN cp xray.key /etc/xray/
-RUN cp xray.crt /etc/xray/
+COPY xray.key /etc/xray/xray.key
+COPY xray.crt /etc/xray/xray.crt
 RUN chmod 777 /etc/xray/xray.key
 CMD /runxray.sh

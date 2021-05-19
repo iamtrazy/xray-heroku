@@ -12,7 +12,7 @@ Address: appname.herokuapp.com
 
 Port: 443
 
-Path: /
+Path: keep this empty or use "/"
 
 Network: ws
 

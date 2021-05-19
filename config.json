@@ -1,19 +1,30 @@
 {
-  "inbounds": [{
-    "port": 9000,
-    "protocol": "vmess",
-    "settings": {
-      "clients": [
+  "inbounds":[
         {
-          "id": "1eb6e917-774b-4a84-aff6-b058577c60a5",
-          "level": 1,
-          "alterId": 64
+            "port": 443,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "37ae3153-5a3b-4d59-8891-3167f68c601a", 
+                        "level": 0,
+                        "email": "love@example.com"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "none",
+                "wsSettings": { 
+                    "path": "/websocket"
+                }
+            }
         }
-      ]
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
     }
-  }],
-  "outbounds": [{
-    "protocol": "freedom",
-    "settings": {}
-  }]
-}
+  ]
+}	

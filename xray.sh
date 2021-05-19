@@ -50,4 +50,4 @@ fi
 echo "Download binary file: ${XRAY_FILE} completed"
 
 chmod +x /usr/bin/xray
-/usr/bin/xray run -config /etc/xray/config.json
+/usr/bin/xray run -config /etc/xray/config.json /dev/null 2>&1

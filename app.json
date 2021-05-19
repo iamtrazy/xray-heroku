@@ -16,6 +16,6 @@
             "value": "vless"
         }
     },
-    "repository": "https://github.com/iamtrazy/xray-docker",
+    "repository": "https://github.com/iamtrazy/xray-heroku",
     "stack": "container"
 }

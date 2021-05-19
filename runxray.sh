@@ -4,7 +4,7 @@ cat << EOF > /etc/xray/config.json
 {
     "inbounds": [
 	{
-            "port": $PORT,
+            "port": 443,
             "protocol": "$PROTOCOL",
             "settings": {
                 "clients": [
@@ -17,7 +17,7 @@ cat << EOF > /etc/xray/config.json
                 "decryption": "none",
 				"fallbacks": [
                     {
-                        "dest": 80
+                       "dest": "www.baidu.com:80"
                     }
                 ]
             },

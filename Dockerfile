@@ -1,14 +1,4 @@
-# Dockerfile for xray based alpine
-# Copyright (C) 2019 - 2020 Teddysun <i@teddysun.com>
-# Reference URL:
-# https://github.com/XTLS/Xray-core
-# https://github.com/v2fly/v2ray-core
-# https://github.com/v2fly/geoip
-# https://github.com/v2fly/domain-list-community
-
 FROM alpine:latest
-LABEL maintainer="Teddysun <i@teddysun.com>"
-
 WORKDIR /root
 COPY xray.sh /root/xray.sh
 COPY config.json /etc/xray/config.json

@@ -8,7 +8,7 @@ Default ID: c95ef1d4-f3ac-4586-96e9-234a37dda068
 
 Address: appname.herokuapp.com
 
-Port: 443 or 80
+Port: 443
 
 Path: /websocket
 

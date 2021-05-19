@@ -22,5 +22,5 @@ RUN set -ex \
 	&& wget -O /usr/local/share/xray/geoip.dat https://github.com/v2fly/geoip/releases/latest/download/geoip.dat
 
 VOLUME /etc/xray
-ENV TZ=Asia/Shanghai
+ENV TZ=Asia/Colombo
 CMD [ "/usr/bin/xray", "-config", "/etc/xray/config.json" ]

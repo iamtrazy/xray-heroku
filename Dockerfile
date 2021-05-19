@@ -4,6 +4,7 @@ COPY xray.sh /root/xray.sh
 COPY config.json /etc/xray/config.json
 RUN set -ex \
 	&& apk add --no-cache tzdata ca-certificates \
+	&& apk add --no-cache openssl \
 	&& mkdir -p /var/log/xray /usr/local/share/xray \
 	&& chmod +x /root/xray.sh \
 	&& /root/xray.sh \

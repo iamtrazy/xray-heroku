@@ -1,9 +1,6 @@
 FROM alpine:latest
 WORKDIR /root
 COPY xray.sh /root/xray.sh
-COPY config.json /etc/xray/config.json
-COPY xray.key /etc/xray/xray.key
-COPY xray.crt /etc/xray/xray.crt
 RUN set -ex \
 	&& apk add --no-cache tzdata ca-certificates \
 	&& mkdir -p /var/log/xray /usr/local/share/xray \
@@ -17,5 +14,4 @@ VOLUME /etc/xray
 ENV TZ=Asia/Colombo
 ADD runxray.sh /runxray.sh
 RUN chmod +x /runxray.sh
-RUN chmod 777 /etc/xray/xray.key
 CMD /runxray.sh

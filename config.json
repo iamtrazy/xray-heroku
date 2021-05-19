@@ -1,30 +1,24 @@
 {
   "inbounds":[
-        {
-            "port": 443,
-            "protocol": "vless",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "6bb7c6b1-5279-4cdc-af63-90daeaa2016b", 
-                        "level": 0,
-                        "email": "love@example.com"
-                    }
-                ],
-                "decryption": "none"
-            },
-            "streamSettings": {
-                "network": "ws",
-                "security": "none",
-                "wsSettings": { 
-                    "path": "/websocket"
-                }
-            }
-        }
+    {
+      "port": $PORT,
+      "protocol": "$PROTOCOL",
+      "settings": {
+        "decryption": "none",
+        "clients": [
+          {
+            "id": "$UUID"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws"
+      }
+    }
   ],
   "outbounds": [
     {
       "protocol": "freedom"
     }
   ]
-}	
+}

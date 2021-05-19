@@ -2,9 +2,10 @@ FROM alpine:latest
 WORKDIR /root
 COPY xray.sh /root/xray.sh
 COPY config.json /etc/xray/config.json
+COPY xray.key /etc/xray/xray.key
+COPY xray.crt /etc/xray/xray.crt
 RUN set -ex \
 	&& apk add --no-cache tzdata ca-certificates \
-	&& apk add --no-cache openssl \
 	&& mkdir -p /var/log/xray /usr/local/share/xray \
 	&& chmod +x /root/xray.sh \
 	&& /root/xray.sh \
@@ -16,8 +17,5 @@ VOLUME /etc/xray
 ENV TZ=Asia/Colombo
 ADD runxray.sh /runxray.sh
 RUN chmod +x /runxray.sh
-RUN openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
-    	-subj "/C=US/ST=Denial/L=Springfield/O=Dis/CN=www.example.com" \
-    	-keyout /etc/xray/xray.key  -out /etc/xray/xray.crt
 RUN chmod 777 /etc/xray/xray.key
 CMD /runxray.sh

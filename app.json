@@ -12,7 +12,6 @@
             "value": "vless"
         }
     },
-    "website": "https://starts.sh",
     "repository": "https://github.com/iamtrazy/xray-docker",
     "stack": "container"
 }

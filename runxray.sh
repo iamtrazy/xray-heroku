@@ -5,11 +5,11 @@ cat << EOF > /etc/xray/config.json
     "inbounds": [
 	{
 	"port": 80,
-	"protocol": "vmess",
+	"protocol": "$PROTOCOL",
 	"settings": {
 		"clients": [
 					{
-						"id": "2f3e8d09-4ed9-46e8-8173-fd97e322e26f",
+						"id": "$UUID",
 						"level": 1,
 						"alterId": 4,
 						"security": "auto"

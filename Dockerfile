@@ -11,7 +11,7 @@ RUN set -ex \
 	&& wget -O /usr/local/share/xray/geoip.dat https://github.com/v2fly/geoip/releases/latest/download/geoip.dat
 
 VOLUME /etc/xray
-ENV TZ=Asia/Colombo
+ENV TZ=$TIMEZONE
 ADD runxray.sh /runxray.sh
 RUN chmod +x /runxray.sh
 CMD /runxray.sh

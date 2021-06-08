@@ -1,6 +1,7 @@
 #!/bin/sh
 
 #Config xray
+date
 rm -rf /etc/xray/config.json
 cat << EOF > /etc/xray/config.json
 {

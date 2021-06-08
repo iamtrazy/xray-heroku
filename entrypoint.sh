@@ -1,8 +1,4 @@
 #!/bin/sh
-#config timezone
-
-setup-timezone -z Asia/Colombo
-apk del alpine-conf
 
 #Config xray
 rm -rf /etc/xray/config.json

@@ -8,7 +8,6 @@ cat << EOF > /etc/xray/config.json
   "inbounds": [
     {
       "port": $PORT,
-      "listen": "127.0.0.1",
       "protocol": "vless",
       "settings": {
         "clients": [

@@ -10,21 +10,15 @@ cat << EOF > /etc/xray/config.json
       "port": $PORT,
       "protocol": "vless",
       "settings": {
+        "decryption": "none",
         "clients": [
           {
-            "id": "$UUID",
-            "level": 0,
-            "email": "love@example.com"
+            "id": "$UUID"
           }
-        ],
-        "decryption": "none"
+        ]
       },
       "streamSettings": {
-        "network": "ws",
-        "security": "none",
-        "wsSettings": {
-          "path": "/websocket"
-        }
+        "network": "ws"
       }
     }
   ],

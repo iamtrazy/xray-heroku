@@ -5,26 +5,28 @@
 rm -rf /etc/xray/config.json
 cat << EOF > /etc/xray/config.json
 {
-  "inbounds":[
+  "inbounds": [
     {
       "port": $PORT,
+      "listen": "127.0.0.1",
       "protocol": "vless",
       "settings": {
-        "decryption": "none",
         "clients": [
           {
-            "id": "$UUID"
+            "id": "$UUID",
+            "level": 0,
+            "email": "love@example.com"
           }
-        ]
+        ],
+        "decryption": "none"
       },
       "streamSettings": {
-        "network": "ws"
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "path": "/websocket"
+        }
       }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom"
     }
   ]
 }

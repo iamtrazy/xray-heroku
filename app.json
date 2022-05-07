@@ -1,5 +1,5 @@
 {
-    "name": "xray-heroku",
+    "name": "联通手厅",
     "description": "deploy xray to heroku",
     "keywords": ["xray"],
     "env": {
